@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="UWP_manual.Basics"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP_manual"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <TextBox Style="{StaticResource subtitleText}" Text="XAML в Universal Windows Platform"/>
+                <TextBox Style="{StaticResource usualText}" Text="  При разработке приложений UWP с помощью языка C# основной технологией для построения графического интерфейса является XAML (eXtensible Application Markup Language). XAML представляет язык разметки на основе XML, который используется для декларативного описания графического интерфейса."/>
+                <TextBox Style="{StaticResource usualText}" Text="  XAML позволяет отделить определение интерфейса или внешнего вида приложения от его логики, которая пишется на C#. Кроме того, декларативное описание интерфейса делает код более компактным и понятным."/>
+                <TextBox Style="{StaticResource usualText}" Text="  Если мы возьмем стандартный проект UWP по типу Blank Application, то как раз увидим файлы, которые используют XAML. Например, в проекте мы можем найти файл MainPage.xaml, который представляет декларативное описание графического интерфейса для единственной страницы в приложении:"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

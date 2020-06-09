@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="UWP_manual.Introduction"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP_manual"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignWidth="827.333" d:DesignHeight="989">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <TextBox Style="{StaticResource subtitleText}" Text="Что такое Universal Windows Platform?"/>
+                <TextBox Style="{StaticResource usualText}" Text="  UWP (Universal Windows Platform) представляет собой унифицированную платформу для создания и запуска приложений в Windows 10 и Windows 10 Mobile." />
+                <TextBox Style="{StaticResource usualText}" Text='  UWP стала результатом эволюции более ранних технологий. Так, с выходом Windows 8 была внедрена новая архитектурная платформа для приложений - Windows Runtime (WinRT), которая позволяла запускать приложения в так называемом режиме Modern (Metro) на десктопах, планшетах. Затем с выходом Windows 8.1 и Windows Phone 8.1 эта технология получила развитие - появились "универсальные приложения", которые можно было запускать сразу Windows 8.1 и WP8.1. И в июле 2015 года официально вышла новая ОС Windows 10. Она использует платформу UWP, которая представляет собой развитие Windows Runtime.' />
+                <TextBox Style="{StaticResource usualText}" Text="  Как подсказывает название платформы, она является универсальной - универсальной для всех устройств экосистемы Windows 10. А это обычные дестопы, планшеты, мобильные устройства, устройства IoT (интернет вещей), Xbox, устройства Surface Hub. И приложение UWP может одинаково работать на всех этих платформах, если на них установлена Windows 10." />
+                <TextBox Style="{StaticResource subtitleText}" Text="Почему UWP?"/>
+                <TextBox Style="{StaticResource usualText}" Text="  Программирование под UWP несет ряд преимуществ:"/>
+                <TextBox Style="{StaticResource usualText}" Margin="10 0 0 0" Text="•   Поддержка широкого круга устройств. Десктопы, планшеты, смартфоны, большие планшеты Surface Hub, различные IoT-устройства, в перспективе устройства виртуальной реальности HoloLens - круг устрйоств, на которых может работать Windows 10 действительно широк."/>
+                <TextBox Style="{StaticResource usualText}" Margin="10 0 0 0" Text="•   Поддержка разных языков и технологий программирования. UWP-приложения можно создавать с помощью таких языков, как Visual C++, C#, Visual Basic, JavaScript. В качестве технологии для создания графического интерфейса Visual C++, C# и Visual Basic используют XAML, JavaScript применяет HTML. Кроме того, С++ может вместо XAML использовать DirectX. То есть достаточно распространенные и и знакомые многим технологии."/>
+                <TextBox Style="{StaticResource usualText}" Margin="10 0 0 0" Text="•   Магазин приложений и удобство распространения. Windows Store представляет собой прекрасное место для распространения UWP-приложений, как платных, так и бесплатных. Сами возможности платформы и магазина Windows Store позволяют использовать разные способы монетизации. Например, можно интегрировать в приложения блоки для показа рекламы через различные SDK. Можно распространять за определенную плату, причем оплату можно гибко настраивать. При необходимости можно встроить предоставление ознакомительной версии, после использования которой пользователь может решить, покупать приложение или нет. И также можно монетизировать по модели freemium, при которой приложение условно бесплатное, а отдельные услуги внутри приложения предоставляются за определенную плату. Причем все эти возможности монетизации обесечиваются встроенными инструментами SDK."/>
+                <TextBox Style="{StaticResource usualText}" Margin="10 0 0 0" Text="•   Богатые возможности платформы. UWP многое наследует от Windows Runtime из Windows 8.1 и в то же время предоставляет много новых функцональностей, как, более богатые возможности по интеграции с облаком, использование Cortana, системы уведомлений в Win10 и многое другое."/>
+                <TextBox Style="{StaticResource subtitleText}" Text="Что необходимо для разработки под UWP?"/>
+                <TextBox Style="{StaticResource usualText}" Text="  Для программирования под UWP необходима ОС Windows 10. Все другие операционные системы, как Windows 8.1/8/7, не говоря уже о Windows XP, не подходят!"/>
+                <TextBox Style="{StaticResource usualText}" Text="  Также потребуется среда разработки Visual Studio 2019 Community. Это полнофункциональная бесплатная среда разработки, которую можно загрузить с официального сайта по адресу:"/>
+                <HyperlinkButton Margin="12 0 0 0" Content="https://www.visualstudio.com/downloads/download-visual-studio-vs" NavigateUri="https://www.visualstudio.com/downloads/download-visual-studio-vs"/>
+                <TextBox Style="{StaticResource usualText}" Text="  Также можно использовать версию VS 2017 или 2015, а все остальные предыдущие версии Visual Studio - 2013, 2012, 2010 и т.д. с UWP не работают."/>
+                <TextBox Style="{StaticResource usualText}" Text="  При установке Visual Studio 2017 в программе установщика необходимо отметить соответствующий пункт:"/>
+                <Image Source="assets/one.png"/>
+                <TextBox Style="{StaticResource usualText}" Text="  Перед чем как начать создание приложений, убедитесь, что в центре обновления в Windows 10 установлена соответствующая опция для разработчиков:"/>
+                <Image Source="assets/two.png"/>
+                <Image Source="assets/three.png"/>
+                <TextBox Style="{StaticResource usualText}" Text="  И имея Windows 10 и установленную Visual Studio 2019, можно приступать к разработке приложений."/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

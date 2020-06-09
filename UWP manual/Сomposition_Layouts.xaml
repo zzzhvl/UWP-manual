@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="UWP_manual.Сomposition_Layouts"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UWP_manual"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <TextBox Style="{StaticResource subtitleText}" Text="Введение в компановку"/>
+                <TextBox Style="{StaticResource usualText}" Text="  В Universal Windows Platform компоновка выполняется с помощью специальных контейнеров. В частности, нам доступны следующие контейнеры компоновки: Grid, VariableSizedWrapGrid, StackPanel, SplitView, RelativePanel и Canvas. Контейнеры компоновки позволяют эффективно распределить доступное пространство между элементами, найти для него наиболее предпочтительные размеры. Также они могут содержать внутри себя другие контейнеры, например, StackPanel в Grid. Поэтому, чтобы добиться нужного нам эффекта в размещении элементов, мы можем помещать однни контейнеры в другие, комбинировать их. Кроме того, если нам не хватает стандартных контейнеров, мы можем определить свои с нужной нам функциональностью."/>
+                <TextBox Style="{StaticResource usualText}" Text="  Все выше перечисленные контейнеры компоновки наследуются от класса Panel, которое предоставляет ряд базовых свойств и методов. А само дерево наследования можно представить следующим образом:"/>
+                <Image Source="assets/tree.png" Width="300"/>
+                <TextBox Style="{StaticResource usualText}" Text="  В частности, отличительной чертой контейнеров компоновки является свойство Children, которое включает все вложенные контейнер элементы. Например, возьмем стандартный контейнер Grid:"/>
+                <Image Source="assets/grid.png"/>
+                <TextBox Style="{StaticResource usualText}" Text="  Здесь в грид помещена кнопка. Этот код эквивалентен следующему:"/>
+                <Image Source="assets/button.png"/>
+                <TextBox Style="{StaticResource usualText}" Text="  Свойство Children представляет коллекцию UIElementCollection, которая содержит объекты UIElement. Практически все стандартные элементы в Universal Windows Platform представляют тип UIElement. И как многие стандартные коллекции, коллекция Children имеет методы для управления содержимым:"/>
+                <TextBox Style="{StaticResource usualText}" Margin="10 0 0 0" Text="•   Add(UIElement item): добавляет UIElement в контейнер"/>
+                <TextBox Style="{StaticResource usualText}" Margin="10 0 0 0" Text="•   Remove(UIElement item): удаляет UIElement из контейнера"/>
+                <TextBox Style="{StaticResource usualText}" Margin="10 0 0 0" Text="•   RemoveAt(int index): удаляет элемент из контейнера по индексу в коллекции Children"/>
+                <TextBox Style="{StaticResource usualText}" Margin="10 0 0 0" Text="•   Move(int oldIndex, int newIndex): перемещает элемент в коллекции с одного индекса на другой"/>
+                <TextBox Style="{StaticResource usualText}" Margin="10 0 0 0" Text="•   Clear(): удаляет все элементы из коллекции"/>
+                <TextBox Style="{StaticResource usualText}" Text="  Например, в коде C# мы могли бы изменять содержимое контейнера компоновки:"/>
+                <Image Source="assets/example1.png"/>
+                <TextBox Style="{StaticResource usualText}" Text="  Хотя в данном случае мы рассматривали работу с элементами для контейнера Grid, но все то же самое будет характерно и для других контейнеров компоновки."/>
+                <TextBox Style="{StaticResource subtitleText}" Text="Процесс компоновки"/>
+                <TextBox Style="{StaticResource usualText}" Text="  Процесс компоновки проходит два этапа: измерение (measure) и расстановка (arrange). На этапе измерения контейнер производит измерение предпочтительного для дочерних элементов места. Однако не всегда контейнер имеет достаточно места, чтобы расставить все элементы в соответствии с их предпочтительными размерами, поэтому их размеры приходится усекать. Затем происходит этап непосредственной расстановки дочерних элементов внутри контейнера."/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>
